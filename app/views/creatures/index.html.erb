@@ -1,0 +1,16 @@
+<h1>Creatures#index</h1>
+<p>Find me in app/views/creatures/index.html.erb</p>
+
+<% @creatures.each do |c| %>
+
+	<div class="well">
+		<h2>Name: <%= c.name %></h2>
+		<p>Description: <%= c.description %></p>
+
+		<%= link_to "Edit", edit_creature_path(c), class: "btn btn-primary" %>
+		<%= link_to "Delete", c, method: :delete, class: "btn btn-danger" %>
+	</div>
+
+<% end %>
+
+
